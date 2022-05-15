@@ -26,7 +26,6 @@ const typeDefs = gql`
         reactionCount: Int
         reactions: [Reaction]
         }    
-
     type Reaction {
         _id: ID
         reactionBody: String
