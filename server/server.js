@@ -3,6 +3,7 @@ const express = require('express');
 
 // import ApolloServer
 const { ApolloServer } = require('apollo-server-express');
+const { authMiddleware } = require('./utils/auth');
 
 // import our typeDefs and resolvers
 const { typeDefs, resolvers } = require('./schemas');
@@ -14,7 +15,9 @@ const PORT = process.env.PORT || 3001;
 //so Apollo knows what our API looks like and how it resolves requests
 const server = new ApolloServer({
   typeDefs,
-  resolvers
+  resolvers,
+  //ensures that every incoming request performs an auth check, passed to resolver as context
+  context: authMiddleware
 });
 
 const app = express();
