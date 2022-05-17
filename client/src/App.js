@@ -6,6 +6,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { setContext } from '@apollo/client/link/context';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -19,9 +20,20 @@ import Signup from "./pages/Signup";
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
 //use ApolloClient() constructor to instatiate apollo client instance and create connection to API endpoint
 const client = new ApolloClient({
-  link: httpLink,
+  link: authLink.concat(httpLink),
   //instantiate new cache object
   cache: new InMemoryCache(),
 });
