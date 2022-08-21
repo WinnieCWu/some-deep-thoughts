@@ -7,7 +7,7 @@ This is a social media application that enables users to sign up or log in so th
 This is a single-page app that uses the MERN stack (MongoDB, Express.js, React, and Node.js) for full-stack development, with React for the front end and the rest for the back end.
 
 ## What it looks like
-Link to deployed app: https://dashboard.heroku.com/apps/afternoon-reef-90509/deploy/heroku-git
+Link to deployed app: http://afternoon-reef-90509.herokuapp.com/ 
 ![Screenshot](https://user-images.githubusercontent.com/95206117/169717915-d38cf8ee-9a96-44a7-8ea9-bda556ed99ca.JPG)
 
 ## Contributors
