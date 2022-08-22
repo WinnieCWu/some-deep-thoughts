@@ -11,4 +11,4 @@ Link to deployed app: http://afternoon-reef-90509.herokuapp.com/
 ![Screenshot](https://user-images.githubusercontent.com/95206117/169717915-d38cf8ee-9a96-44a7-8ea9-bda556ed99ca.JPG)
 
 ## Contributors
-Grateful for starter code and the walk through guidelines from UC Berkeley Extension Coding Bootcamp. 
+Some starter code from UC Berkeley Extension Coding Bootcamp and myself. 
